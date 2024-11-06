@@ -12,7 +12,7 @@ import wodCharacterSheetImg from "../assets/img/wod-character-sheet.png";
 
 export default function Work() {
   return (
-    <section className="work flex h-full max-w-[600px] flex-col items-center justify-center gap-8 mt-[8rem]">
+    <section className="work mt-[8rem] flex h-full max-w-[600px] flex-col items-center justify-center gap-8 p-4 sm:p-0">
       <div className="section-title w-full">
         <h1 className="text-3xl font-extrabold uppercase text-amber-500">
           my projects

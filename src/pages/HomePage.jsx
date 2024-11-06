@@ -1,13 +1,25 @@
 import { styles } from "../utils/styles";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function HomePage() {
+  const { scrollY } = useScroll();
+  const headerOpacity = useTransform(scrollY, [0, 200], [1, 0]);
+
   return (
-    <div className="homepage flex h-full w-full grow flex-col items-center justify-center gap-8">
+    <div className="homepage flex w-full grow flex-col items-center justify-center gap-8">
       <section className={styles.section}>
-        <div className="max-w-[600px]">
-          <h1 className="text-3xl font-bold uppercase text-amber-500">
+        <motion.header
+          initial={{ y: -30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ staggerChildren: 0.3, duration: 0.3 }}
+          className="max-w-[600px]"
+        >
+          <motion.h1
+            style={{opacity: headerOpacity}}
+            className="text-3xl font-bold uppercase text-amber-500"
+          >
             Web designer
-          </h1>
+          </motion.h1>
           <h3 className="font-light uppercase tracking-[6px]">
             born in the caribbean
           </h3>
@@ -23,7 +35,7 @@ export default function HomePage() {
             </p>
             <p></p>
           </h1>
-        </div>
+        </motion.header>
       </section>
 
       <section className={`${styles.section} bg-white/20`}>

@@ -3,10 +3,14 @@ import { NavLink } from "react-router-dom";
 import { TiThMenu } from "react-icons/ti";
 
 const NavBtn = ({ title, path, children, onClick }) => (
-  <div className="w-full cursor-pointer font-light capitalize transition-all duration-300 hover:font-bold hover:text-amber-500 sm:w-fit sm:text-center">
+  <div className="flex w-full cursor-pointer p-2 font-light capitalize transition-all duration-300 hover:font-bold sm:w-fit sm:text-center hover:sm:text-amber-500">
     <NavLink
       to={path}
-      className={({ isActive }) => (isActive ? "font-bold text-amber-500" : "")}
+      className={({ isActive }) =>
+        isActive
+          ? "w-full text-center font-bold text-amber-500"
+          : "w-full text-center"
+      }
       onClick={onClick}
     >
       {title}
@@ -25,7 +29,7 @@ export default function NavBar() {
   }
 
   return (
-    <nav className="bg-black/80 p-4 drop-shadow-xl backdrop-blur-[10px] sm:p-8">
+    <nav className="flex flex-col gap-2 bg-black/80 p-4 drop-shadow-xl backdrop-blur-[10px] sm:p-8">
       {/* LARGE SCREEN NAV */}
       <div className="hidden w-full justify-between gap-4 sm:flex">
         <NavLink

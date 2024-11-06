@@ -5,7 +5,7 @@ import DetailSection from "../DetailSection";
 
 export default function CompendioLegalRd() {
   return (
-    <div className="mt-4 flex w-full max-w-[600px] flex-col gap-6">
+    <div className="mt-[8rem] flex w-full max-w-[600px] flex-col gap-6 p-4">
       <Link
         to="/work"
         className="font flex cursor-pointer items-center gap-2 font-light uppercase transition-all duration-300 hover:font-bold"
@@ -66,9 +66,7 @@ export default function CompendioLegalRd() {
           <li>03 General Public</li>
         </ol>
       </DetailSection>
-      <DetailSection title="">
-        
-      </DetailSection>
+      <DetailSection title=""></DetailSection>
     </div>
   );
 }

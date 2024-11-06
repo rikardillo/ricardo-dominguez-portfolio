@@ -15,7 +15,7 @@ const SudImg = ({ src }) => (
 
 export default function BeautifulSudoku() {
   return (
-    <div className="mt-4 flex w-full max-w-[600px] flex-col gap-6 p-4 sm:p-0">
+    <div className="mt-[8rem] flex w-full max-w-[600px] flex-col gap-6 p-4 sm:p-0">
       <Link
         to="/work"
         className="font flex cursor-pointer items-center gap-2 font-light uppercase transition-all duration-300 hover:font-bold"
